@@ -1,0 +1,85 @@
+body{
+  background-color: rgb(42, 42, 42);
+  display: grid;
+  place-content: center;
+  min-block-size: 100vh;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.tw-card{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tw-card-img{
+  inline-size: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.tw-card-user{
+  display: flex;
+  gap: 1rem;
+}
+
+.tw-card-text{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: .15rem;
+  justify-content: center;
+}
+
+.tw-card-span{
+  color: rgb(185, 185, 185);
+  font-size: .9rem;
+}
+
+.tw-card-button{
+  background-color: #fff;
+  padding: .5rem 2rem;
+  color: #000;
+  border-radius: 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  font-weight: bold;
+}
+
+.tw-card-button.is-following{
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  inline-size: 10.5rem;
+}
+
+.tw-card-button.is-following:hover{
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.133);
+  color: red;
+}
+
+.tw-card-button:hover{
+  opacity: .8;
+}
+
+.tw-card-button-text.stop-follow{
+  display: none;
+}
+
+.tw-card-button.is-following:hover .tw-card-button-text{
+  display: none;
+}
+
+.tw-card-button.is-following:hover .tw-card-button-text.stop-follow{
+  display: inline-block;
+}
